@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    background-color: #3c4043;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #61dafb;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid #61dafb;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    background-color: #2b2d30;
+    color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #21a1f1;
+    box-shadow: 0 0 10px rgba(33, 164, 241, 0.6);
+}
+
+button {
+    width: 80%;
+    padding: 15px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s;
+    margin-bottom: 20px;
+    background-color: #61dafb;
+}
+
+button:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #61dafb;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+#question {
+    margin-top: 20px;
+}
+
+#doYouLoveMessage {
+    font-size: 2rem;
+    color: #61dafb;
+    margin: 20px 0;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.circular-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #28a745, #4CAF50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.circular-button:hover {
+    background: linear-gradient(135deg, #3fc064, #69db80);
+    transform: scale(1.1);
+}
+
+#noButton {
+    background: linear-gradient(135deg, #f44336, #ff5f52);
+}
+
+#noButton:hover {
+    background: linear-gradient(135deg, #ff7b75, #ff8a80);
+}
+
+#loveMessage {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #61dafb;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease;
+    transform: scale(0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #message, #loveMessage, #doYouLoveMessage {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #message, #loveMessage, #doYouLoveMessage {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
